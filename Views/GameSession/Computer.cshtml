@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Computer";
+
+}
+
+@section chessGamStyle{
+    <link href="@Url.Content("~/Content/squareBoard.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet"
+          href="https://unpkg.com/@("@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css")"
+          integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+          crossorigin="anonymous">
+}
+@section chessGameScripts{
+    <script src="@Url.Content("~/Scripts/chess.js")"></script>
+    <script src="@Url.Content("~/Scripts/engine.js")"></script>
+    <script src="@Url.Content("~/Scripts/game.js")"></script>
+    @Scripts.Render("~/bundles/jqueryui")
+    <script src="https://unpkg.com/@("@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js")"
+            integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+            crossorigin="anonymous"></script>
+}
+
+
+<div id="squareBoard-wrapper" class="container row center-block">
+    <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl9">
+        <div id="board1" style="width: 90%"></div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl3">
+        <div class="status-container overflow-auto">
+            <h3 style="margin-top: 5px">
+                Game Progress
+            </h3>
+            <div id="delimiter"></div>
+            <div class="" id="pgn-container">
+
+            </div>
+        </div>
+    </div>
+</div>

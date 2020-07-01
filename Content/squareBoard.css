@@ -1,0 +1,25 @@
+﻿#board1{
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.status-container {
+    padding: 5%;
+    border-radius: 10px;
+    background-color: #EEE;
+    color: black;
+    margin-top: 100px;
+    height: 600px;
+    overflow:auto;
+}
+
+#delimiter{
+    margin-top: 5%;
+    border-top: 1px solid black;
+}
+
+#pgn-container{
+    display:grid;
+    grid-template-columns: 50% 50%;
+
+}
